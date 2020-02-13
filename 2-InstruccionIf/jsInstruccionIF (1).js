@@ -1,12 +1,14 @@
 function mostrar()
 {
 //tomo la edad  
-//var edad
-//edad=document.getElementById('edad').value;
+var edad;
 
-	if (-2) 
+edad=document.getElementById('edad').value;
+edad=parseInt(edad);
+
+	if (edad == 15) 
 	{
-		alert("asd");
+		alert("Niña Bonita");
 	}
 
 }//FIN DE LA FUNCIÓN
