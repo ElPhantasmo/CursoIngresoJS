@@ -15,5 +15,6 @@ function mostrar()
 	alert (apellido);
 	//alert(); //sale vacio
 	alert (primerPrecio);
+	alert (testeando git);
 }
 
