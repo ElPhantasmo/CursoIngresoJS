@@ -11,14 +11,17 @@ function mostrar()
 		alert("Es adolescente");
 	}
 
-	else if (edad<13) 
+	else 
 	{
-		alert("Es un Niño");
-	}
+		if (edad<13) 
+		{
+			alert("Es un Niño");
+		}
 	
-	else
-	{
-		alert ("Es Adulto");
+		else
+		{
+			alert ("Es Adulto");
+		}
 	}
 
 
