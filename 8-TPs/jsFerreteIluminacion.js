@@ -10,5 +10,87 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	var precioLamparas;
+ 	var cantidadLamparas;
+ 	var marcaLamparas;
+ 	var precioConDescuento;
+ 	var precioBruto;
+ 	var descuento
+ 	var iibb
+
+ 	cantidadLamparas = document.getElementById('Cantidad').value;
+ 	cantidadLamparas = parseInt(cantidadLamparas);
+ 	precioLamparas = 35;
+ 	marcaLamparas = document.getElementById('Marca').value;
+ 	descuento = 0;
+ 	precioBruto = precioLamparas*cantidadLamparas;
+
+
+//A)
+ 		if (cantidadLamparas>5) 
+	 		{
+	 			descuento = 50;
+	 		}
+//B)	 	
+	 	if (cantidadLamparas==5) 
+	 		{
+	 			if (marcaLamparas == "ArgentinaLuz") 
+	 			{
+	 				descuento = 40;
+	 			}	
+	 			
+	 			else
+	 			{
+					descuento = 30;
+	 			}
+	 		}
+//C)
+	 	if (cantidadLamparas==4) 
+	 		{
+	 			if (marcaLamparas == "ArgentinaLuz" || marcaLamparas == "FelipeLamparas") 
+	 			{
+	 				descuento = 25;
+	 			}	
+	 			
+	 			else
+	 			{
+					descuento = 20;
+	 			}
+	 		}
+//D)
+	 	if (cantidadLamparas==3) 
+	 		{
+	 			if (marcaLamparas =="ArgentinaLuz")
+	 			{
+	 				descuento = 15;
+	 			}
+
+	 			else
+	 			{	
+	 				if (marcaLamparas == "FelipeLamparas")
+	 				{
+	 					descuento = 10;
+	 				}
+
+	 				else
+	 				{	
+	 					descuento = 5;
+	 				}
+	 			}
+	 		}
+//E)	
+		if (precioConDescuento>119) 
+			{
+				iibb = (precioConDescuento + ((precioConDescuento*10)/100));
+				console.log("Usted pago " + iibb + " de IIBB");
+			}
+
+
+
+
+
+	
+	precioConDescuento = (precioBruto-((descuento*precioBruto)/100));
+	document.getElementById('precioDescuento').value=precioConDescuento
+
 }
