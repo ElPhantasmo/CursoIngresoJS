@@ -9,6 +9,12 @@ function mostrar()
 		{
 			numero = prompt("Reingrese numero");
 			numero = parseInt(numero);
+
+		while (isNaN(numero))
+			{
+				numero = prompt("Error, ingrese un numero");
+				numero = parseInt(numero);			
+			}
 		}
 
 	document.getElementById('Numero').value=numero;
